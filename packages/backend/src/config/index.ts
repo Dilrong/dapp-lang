@@ -11,7 +11,8 @@ export default {
     USER: process.env.DB_USER,
     PASSWORD: process.env.DB_PASSWORD,
     HOST: process.env.DB_HOST,
-    PORT: process.env.DB_PORT
+    PORT: process.env.DB_PORT,
+    DB_SYNCHRONIZE: process.env.DB_SYNCHRONIZE
   },
   LOG: {
     DEFAULT_LEVEL: 'info',
