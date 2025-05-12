@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {
   Table,
@@ -50,7 +49,7 @@ export default function DappTable() {
     async function fetchDapps() {
       try {
         const res = await fetch(
-          "https://raw.githubusercontent.com/dapp-lang/dapps/main/shard/data/dapps.json"
+          "https://raw.githubusercontent.com/Dilrong/dapp-lang/refs/heads/main/packages/shared/data/dapps.json"
         );
         if (!res.ok) throw new Error("Failed to fetch dapps");
         const data = await res.json();

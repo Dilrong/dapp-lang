@@ -6,6 +6,24 @@
     "function": "Lending, Borrowing"
   },
   {
+    "name": "Chainlink",
+    "link": "https://chain.link",
+    "chain": "Ethereum, Polygon, Binance Smart Chain",
+    "function": "Oracle, Data Feeds"
+  },
+  {
+    "name": "Compound",
+    "link": "https://compound.finance",
+    "chain": "Ethereum",
+    "function": "Lending, Borrowing"
+  },
+  {
+    "name": "MakerDAO",
+    "link": "https://makerdao.com",
+    "chain": "Ethereum",
+    "function": "Stablecoin, Governance"
+  },
+  {
     "name": "Uniswap",
     "link": "https://uniswap.org",
     "chain": "Ethereum",

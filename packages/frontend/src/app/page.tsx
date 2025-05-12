@@ -1,4 +1,4 @@
-import DappTable from "../components/DappTable";
+import DappTable from "@/components/DappTable";
 
 export default function Home() {
   return (

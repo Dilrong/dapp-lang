@@ -20,7 +20,7 @@ export default class LLMService {
 
       // 2. DApp이 있으면 검증된 링크와 메시지 반환
       const res = await fetch(
-        'https://raw.githubusercontent.com/dapp-lang/dapps/main/shard/data/dapps.json'
+        'https://raw.githubusercontent.com/Dilrong/dapp-lang/refs/heads/main/packages/shared/data/dapps.json'
       )
       if (!res.ok) {
         logger.info('No Dapp found in JSON, proceeding with LLM')
