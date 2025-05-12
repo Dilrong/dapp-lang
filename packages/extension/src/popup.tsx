@@ -1,5 +1,6 @@
 import "./style.css"
 
+import axios from "axios"
 import { useState } from "react"
 
 import { ChatHistory } from "./components/chat-history"
@@ -18,20 +19,11 @@ export default function IndexPopup() {
     setInput("")
 
     try {
-      const response = await fetch("http://localhost:3000/ask", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ question: userMessage })
+      const response = await axios.post("http://localhost:3000/v1/llm/ask", {
+        question: userMessage
       })
 
-      if (!response.ok) {
-        throw new Error("서버 응답 오류")
-      }
-
-      const data = await response.json()
-      const answer = data.answer ?? "응답이 없습니다."
+      const answer = response.data.data ?? "응답이 없습니다."
 
       // 한 글자씩 애니메이션 효과로 추가
       let currentText = ""

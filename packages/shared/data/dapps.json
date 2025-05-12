@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Aave",
+    "link": "https://aave.com",
+    "chain": "Ethereum, Polygon",
+    "function": "Lending, Borrowing"
+  },
+  {
+    "name": "Uniswap",
+    "link": "https://uniswap.org",
+    "chain": "Ethereum",
+    "function": "Swap, Liquidity"
+  }
+]

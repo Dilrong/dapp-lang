@@ -6,7 +6,6 @@ import v1Router from './routes/v1'
 import env from './config'
 import logMiddleware from './core/middleware/logging.middleware'
 import { logger } from './core/logger'
-import { initializeDatabase } from './core/db/connection'
 
 const app = express()
 
@@ -24,7 +23,6 @@ app.use('/', v1Router)
 
 const startServer = async () => {
   try {
-    await initializeDatabase()
     app.listen(env.PORT, () => {
       console.log(`App Listening on port ${env.PORT}`)
     })
