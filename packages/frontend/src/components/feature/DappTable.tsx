@@ -1,4 +1,3 @@
-// src/components/DappTable.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -24,45 +23,26 @@ import {
 } from "@/components/ui/select";
 import { Search, ExternalLink, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
-interface Dapp {
-  name: string;
-  link: string;
-  chain: string;
-  function: string;
+import Link from "next/link";
+import { Dapp } from "@/types/dapp";
+interface DappTableProps {
+  initialDapps: Dapp[];
 }
 
-export default function DappTable() {
+export default function DappTable({ initialDapps }: DappTableProps) {
   const [search, setSearch] = useState("");
-  const [dapps, setDapps] = useState<Dapp[]>([]);
-  const [filteredDapps, setFilteredDapps] = useState<Dapp[]>([]);
+  const [dapps] = useState<Dapp[]>(initialDapps);
+  const [filteredDapps, setFilteredDapps] = useState<Dapp[]>(
+    initialDapps.slice(0, 10)
+  );
   const [view, setView] = useState<"table" | "card">("table");
   const [chainFilter, setChainFilter] = useState("all");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const { theme, setTheme } = useTheme();
 
-  const pageSize = 10; // 한 번에 로드할 Dapp 수
+  const pageSize = 10;
 
-  // 초기 데이터 로드
-  useEffect(() => {
-    async function fetchDapps() {
-      try {
-        const res = await fetch(
-          "https://raw.githubusercontent.com/Dilrong/dapp-lang/refs/heads/main/packages/shared/data/dapps.json"
-        );
-        if (!res.ok) throw new Error("Failed to fetch dapps");
-        const data = await res.json();
-        setDapps(data);
-        setFilteredDapps(data.slice(0, pageSize));
-      } catch (err) {
-        console.error("Error fetching Dapps:", err);
-      }
-    }
-    fetchDapps();
-  }, []);
-
-  // 검색 및 필터링
   useEffect(() => {
     const lowerSearch = search.toLowerCase().trim();
     let filtered = dapps;
@@ -85,12 +65,10 @@ export default function DappTable() {
     setHasMore(filtered.length > pageSize * page);
   }, [search, chainFilter, dapps, page]);
 
-  // 다음 페이지 로드
   function loadMore() {
     setPage((prev) => prev + 1);
   }
 
-  // 고유 체인 목록
   const chains = [
     "all",
     ...new Set(
@@ -102,9 +80,8 @@ export default function DappTable() {
 
   return (
     <div className="container mx-auto p-4">
-      {/* 상단 검색 및 필터 */}
       <div className="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-between">
-        <div className="flex gap-2 w-full sm:w-auto">
+        <div className="flex gap-2 w-full">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
@@ -112,6 +89,7 @@ export default function DappTable() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-10 max-w-md w-full"
+              aria-label="Search Dapps"
             />
           </div>
           <Select value={chainFilter} onValueChange={setChainFilter}>
@@ -150,7 +128,6 @@ export default function DappTable() {
         </div>
       </div>
 
-      {/* 무한 스크롤 */}
       <InfiniteScroll
         dataLength={filteredDapps.length}
         next={loadMore}
@@ -158,7 +135,6 @@ export default function DappTable() {
         loader={<div className="text-center py-4">Loading...</div>}
         endMessage={<div className="text-center py-4">No more Dapps</div>}
       >
-        {/* 테이블 뷰 */}
         {view === "table" && (
           <div className="rounded-lg border bg-card shadow-sm">
             <Table>
@@ -177,7 +153,15 @@ export default function DappTable() {
                       key={index}
                       className="hover:bg-muted/50 transition-colors"
                     >
-                      <TableCell className="font-medium">{dapp.name}</TableCell>
+                      <TableCell className="font-medium">
+                        <Link
+                          href={`/dapp/${dapp.name
+                            .toLowerCase()
+                            .replace(/\s/g, "-")}`}
+                        >
+                          {dapp.name}
+                        </Link>
+                      </TableCell>
                       <TableCell>
                         <a
                           href={dapp.link}
@@ -207,14 +191,21 @@ export default function DappTable() {
           </div>
         )}
 
-        {/* 카드 뷰 */}
         {view === "card" && (
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {filteredDapps.length > 0 ? (
               filteredDapps.map((dapp, index) => (
                 <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg">{dapp.name}</CardTitle>
+                    <CardTitle className="text-lg">
+                      <Link
+                        href={`/dapp/${dapp.name
+                          .toLowerCase()
+                          .replace(/\s/g, "-")}`}
+                      >
+                        {dapp.name}
+                      </Link>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">

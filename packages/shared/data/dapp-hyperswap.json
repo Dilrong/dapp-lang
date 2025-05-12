@@ -1,0 +1,6 @@
+{
+  "name": "HyperSwap",
+  "link": "https://hyperswap.hyperliquid.xyz",
+  "chain": "HyperEVM",
+  "function": "Swap, Liquidity"
+}

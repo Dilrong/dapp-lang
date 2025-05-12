@@ -6,6 +6,12 @@
     "function": "Lending, Borrowing"
   },
   {
+    "name": "Axie Infinity",
+    "link": "https://axieinfinity.com",
+    "chain": "Ronin",
+    "function": "Play-to-Earn, Gaming"
+  },
+  {
     "name": "Chainlink",
     "link": "https://chain.link",
     "chain": "Ethereum, Polygon, Binance Smart Chain",
@@ -18,10 +24,112 @@
     "function": "Lending, Borrowing"
   },
   {
+    "name": "CryptoKitties",
+    "link": "https://cryptokitties.co",
+    "chain": "Ethereum",
+    "function": "NFT Collectibles, Gaming"
+  },
+  {
+    "name": "CryptoPunks",
+    "link": "https://cryptopunks.app",
+    "chain": "Ethereum",
+    "function": "NFT Collectibles, Trading"
+  },
+  {
+    "name": "Curve Finance",
+    "link": "https://curve.fi",
+    "chain": "Ethereum, Polygon, Arbitrum",
+    "function": "Stablecoin Swap, Liquidity"
+  },
+  {
+    "name": "Decentraland",
+    "link": "https://decentraland.org",
+    "chain": "Ethereum",
+    "function": "Metaverse, Gaming"
+  },
+  {
+    "name": "HyperLend",
+    "link": "https://hyperlend.hyperliquid.xyz",
+    "chain": "HyperEVM",
+    "function": "Lending, Borrowing"
+  },
+  {
+    "name": "HyperSwap",
+    "link": "https://hyperswap.hyperliquid.xyz",
+    "chain": "HyperEVM",
+    "function": "Swap, Liquidity"
+  },
+  {
+    "name": "HypurrFi",
+    "link": "https://hypurrfi.hyperliquid.xyz",
+    "chain": "HyperEVM",
+    "function": "Yield Farming, Staking"
+  },
+  {
+    "name": "Kyber Network",
+    "link": "https://kyber.network",
+    "chain": "Ethereum",
+    "function": "Swap, DApp Marketplace"
+  },
+  {
+    "name": "Lido",
+    "link": "https://lido.fi",
+    "chain": "Ethereum, Polygon, Solana",
+    "function": "Liquid Staking"
+  },
+  {
     "name": "MakerDAO",
     "link": "https://makerdao.com",
     "chain": "Ethereum",
     "function": "Stablecoin, Governance"
+  },
+  {
+    "name": "NBA Top Shot",
+    "link": "https://nbatopshot.com",
+    "chain": "Flow",
+    "function": "NFT Collectibles, Marketplace"
+  },
+  {
+    "name": "OpenSea",
+    "link": "https://opensea.io",
+    "chain": "Ethereum, Polygon, Solana",
+    "function": "NFT Marketplace, Trading"
+  },
+  {
+    "name": "PancakeSwap",
+    "link": "https://pancakeswap.finance",
+    "chain": "Binance Smart Chain",
+    "function": "Swap, Yield Farming, Staking"
+  },
+  {
+    "name": "Polymarket",
+    "link": "https://polymarket.com",
+    "chain": "Polygon",
+    "function": "Prediction Market"
+  },
+  {
+    "name": "Raydium",
+    "link": "https://raydium.io",
+    "chain": "Solana",
+    "function": "Automated Market Maker, Liquidity"
+  },
+  {
+    "name": "Solv Protocol",
+    "link": "https://solv.finance",
+    "chain": "HyperEVM",
+    "function": "Asset Management, Liquidity"
+  },
+  {
+    "name": "Splinterlands",
+    "link": "https://splinterlands.com",
+    "chain": "Hive, Ethereum, WAX",
+    "function": "Trading Card Game, Play-to-Earn"
+  },
+  {
+    "name": "Synthetix",
+    "link": "https://synthetix.io",
+    "chain": "Ethereum, Optimism",
+    "function": "Synthetic Assets, Trading"
   },
   {
     "name": "Uniswap",

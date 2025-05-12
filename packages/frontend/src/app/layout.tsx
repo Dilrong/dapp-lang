@@ -1,7 +1,9 @@
-// app/layout.tsx
 import "./globals.css";
 import { IBM_Plex_Sans } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/feature/theme-provider";
+import Header from "@/components/feature/Header";
+import Footer from "@/components/feature/Footer";
+import { DOMAIN } from "@/lib/const";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -9,11 +11,27 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata = {
-  title: "Dapp-lang",
-  description: "Decentralized Application Explorer",
+  title: "Dapplang - Decentralized Application Explorer",
+  description:
+    "Discover top decentralized applications (Dapps) across Ethereum, HyperEVM, Solana, and more. Explore DeFi, NFTs, gaming, and social Dapps.",
+  keywords:
+    "Dapp, decentralized application, blockchain, Ethereum, HyperEVM, Solana, DeFi, NFT, gaming",
+  openGraph: {
+    title: "Dapplang - Decentralized Application Explorer",
+    description:
+      "Discover top decentralized applications (Dapps) across Ethereum, HyperEVM, Solana, and more.",
+    url: DOMAIN,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dapplang - Decentralized Application Explorer",
+    description:
+      "Discover top decentralized applications (Dapps) across Ethereum, HyperEVM, Solana, and more.",
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -27,12 +45,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="bg-card shadow-sm">
-            <div className="container mx-auto p-4">
-              <h1 className="text-2xl font-bold text-primary">Dapp-lang</h1>
-            </div>
-          </header>
-          <main>{children}</main>
+          <Header></Header>
+          <div className="min-h-screen flex flex-col bg-gradient-to-br from-white via-gray-100 to-gray-200 text-gray-900 dark:bg-gradient-to-br dark:from-gray-900 dark:via-black dark:to-gray-800 dark:text-gray-200 font-sans">
+            <main className="flex-grow container mx-auto p-6">{children}</main>
+          </div>
+          <Footer></Footer>
         </ThemeProvider>
       </body>
     </html>

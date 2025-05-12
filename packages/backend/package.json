@@ -36,6 +36,7 @@
     "express": "^5.1.0",
     "langchain": "^0.3.24",
     "mysql2": "^3.14.1",
+    "next-intl": "^4.1.0",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.22",
