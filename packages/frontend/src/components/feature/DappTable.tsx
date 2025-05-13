@@ -79,13 +79,13 @@ export default function DappTable({ initialDapps }: DappTableProps) {
   ];
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto">
       <div className="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-between">
         <div className="flex gap-2 w-full">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search Dapps (e.g., aave, lending)"
+              placeholder="Search Dapps (e.g. aave, lending)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-10 max-w-md w-full"

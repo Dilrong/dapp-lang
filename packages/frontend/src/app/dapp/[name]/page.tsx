@@ -35,7 +35,7 @@ export default async function DappPage({ params }: DappPageProps) {
   return (
     <>
       <Head>
-        <title>{dapp.name} - Dapp-lang</title>
+        <title>{dapp.name} - Dapplang</title>
         <meta
           name="description"
           content={`Explore ${dapp.name}, a ${dapp.function} Dapp on ${dapp.chain}.`}
@@ -44,7 +44,7 @@ export default async function DappPage({ params }: DappPageProps) {
           name="keywords"
           content={`${dapp.name}, ${dapp.function}, ${dapp.chain}, Dapp, blockchain`}
         />
-        <meta property="og:title" content={`${dapp.name} - Dapp-lang`} />
+        <meta property="og:title" content={`${dapp.name} - Dapplang`} />
         <meta
           property="og:description"
           content={`Explore ${dapp.name}, a ${dapp.function} Dapp on ${dapp.chain}.`}
