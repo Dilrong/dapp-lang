@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Head from "next/head";
 import { Dapp } from "@/types/dapp";
 import { DAPP_JSON_URL, DOMAIN } from "@/lib/const";
+import DappCard from "@/components/feature/DappCard";
 
 interface DappPageProps {
   params: Promise<{ name: string }>;
@@ -33,7 +34,7 @@ export default async function DappPage({ params }: DappPageProps) {
   }
 
   return (
-    <>
+    <div>
       <Head>
         <title>{dapp.name} - Dapplang</title>
         <meta
@@ -63,26 +64,7 @@ export default async function DappPage({ params }: DappPageProps) {
           })}
         </script>
       </Head>
-      <div className="container mx-auto p-4 bg-card text-foreground">
-        <h1 className="text-3xl font-bold mb-4">{dapp.name}</h1>
-        <p>
-          <strong>Link:</strong>{" "}
-          <a
-            href={dapp.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            {dapp.link}
-          </a>
-        </p>
-        <p>
-          <strong>Chain:</strong> {dapp.chain}
-        </p>
-        <p>
-          <strong>Function:</strong> {dapp.function}
-        </p>
-      </div>
-    </>
+      <DappCard dapp={dapp} />
+    </div>
   );
 }

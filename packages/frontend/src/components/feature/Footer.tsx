@@ -6,7 +6,7 @@ export default function Footer() {
       <span>© 2025 Dilrong. All rights reserved.</span>
       <div>
         <a
-          href="https://github.com/Dilrong"
+          href="https://github.com/Dilrong/dapp-lang"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-3 text-blue-400 hover:text-blue-500 transition-colors"

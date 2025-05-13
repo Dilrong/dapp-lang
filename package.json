@@ -12,8 +12,5 @@
     "install:all": "npm install && npm run install --workspaces"
   },
   "author": "dilrong, <dilrong@dilrong.com>",
-  "license": "ISC",
-  "dependencies": {
-    "next-intl": "^4.1.0"
-  }
+  "license": "ISC"
 }

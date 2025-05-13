@@ -6,10 +6,34 @@
     "function": "Lending, Borrowing"
   },
   {
+    "name": "Abracadabra",
+    "link": "https://abracadabra.money",
+    "chain": "HyperEVM",
+    "function": "Lending, Leverage Farming"
+  },
+  {
+    "name": "Across",
+    "link": "https://across.to",
+    "chain": "HyperEVM",
+    "function": "Interoperability Protocol"
+  },
+  {
+    "name": "AGNI Finance",
+    "link": "https://agni.finance",
+    "chain": "Mantle",
+    "function": "Decentralized Exchange, Yield Farming"
+  },
+  {
     "name": "Axie Infinity",
     "link": "https://axieinfinity.com",
     "chain": "Ronin",
     "function": "Play-to-Earn, Gaming"
+  },
+  {
+    "name": "Bancor",
+    "link": "https://bancor.network",
+    "chain": "Ethereum",
+    "function": "Decentralized Exchange, Liquidity Protocol"
   },
   {
     "name": "Chainlink",
@@ -42,16 +66,52 @@
     "function": "Stablecoin Swap, Liquidity"
   },
   {
+    "name": "deBridge",
+    "link": "https://app.debridge.finance",
+    "chain": "HyperEVM, Ethereum, Arbitrum",
+    "function": "Cross-Chain Bridging"
+  },
+  {
     "name": "Decentraland",
     "link": "https://decentraland.org",
     "chain": "Ethereum",
     "function": "Metaverse, Gaming"
   },
   {
+    "name": "FusionX Finance",
+    "link": "https://fusionx.finance",
+    "chain": "Mantle",
+    "function": "Decentralized Exchange, Staking"
+  },
+  {
+    "name": "HyperScanner",
+    "link": "https://hypurrscan.io",
+    "chain": "Hyperliquid, HyperEVM",
+    "function": "Analytics, Market Data"
+  },
+  {
+    "name": "Hyperbeat",
+    "link": "https://app.hyperbeat.org/",
+    "chain": "HyperEVM",
+    "function": "Vault"
+  },
+  {
+    "name": "Hyperfolio",
+    "link": "https://www.hyperfolio.xyz/",
+    "chain": "HyperEVM",
+    "function": "protfolio"
+  },
+  {
     "name": "HyperLend",
     "link": "https://hyperlend.hyperliquid.xyz",
     "chain": "HyperEVM",
     "function": "Lending, Borrowing"
+  },
+  {
+    "name": "HyperPlay",
+    "link": "https://hyperplay.xyz",
+    "chain": "Mantle",
+    "function": "Web3 Gaming Launcher"
   },
   {
     "name": "HyperSwap",
@@ -66,10 +126,28 @@
     "function": "Yield Farming, Staking"
   },
   {
+    "name": "INIT Capital",
+    "link": "https://init.capital",
+    "chain": "Mantle",
+    "function": "Money Market, Liquidity Provision"
+  },
+  {
+    "name": "iZUMi Finance",
+    "link": "https://izumi.finance",
+    "chain": "Mantle, Ethereum, BNB Chain",
+    "function": "Liquidity Mining, DEX"
+  },
+  {
     "name": "Kyber Network",
     "link": "https://kyber.network",
     "chain": "Ethereum",
     "function": "Swap, DApp Marketplace"
+  },
+  {
+    "name": "LoopedHYPE",
+    "link": "https://loopedhype.com",
+    "chain": "HyperEVM",
+    "function": "Yield Optimization"
   },
   {
     "name": "Lido",
@@ -84,10 +162,28 @@
     "function": "Stablecoin, Governance"
   },
   {
+    "name": "Merchant Moe",
+    "link": "https://merchantmoe.com",
+    "chain": "Mantle",
+    "function": "Decentralized Exchange, Liquidity Provision"
+  },
+  {
+    "name": "mETH Protocol",
+    "link": "https://meth.mantle.xyz",
+    "chain": "Mantle, Ethereum",
+    "function": "Liquid Staking Protocol"
+  },
+  {
     "name": "NBA Top Shot",
     "link": "https://nbatopshot.com",
     "chain": "Flow",
     "function": "NFT Collectibles, Marketplace"
+  },
+  {
+    "name": "Ondo Finance",
+    "link": "https://ondo.finance",
+    "chain": "Mantle, Ethereum",
+    "function": "Real-World Asset Tokenization"
   },
   {
     "name": "OpenSea",
@@ -108,10 +204,22 @@
     "function": "Prediction Market"
   },
   {
+    "name": "pvp.trade",
+    "link": "https://pvp.trade",
+    "chain": "HyperEVM",
+    "function": "Social Trading, Telegram Bot"
+  },
+  {
     "name": "Raydium",
     "link": "https://raydium.io",
     "chain": "Solana",
     "function": "Automated Market Maker, Liquidity"
+  },
+  {
+    "name": "The Sandbox",
+    "link": "https://www.sandbox.game",
+    "chain": "Ethereum, Polygon",
+    "function": "Metaverse, NFT Gaming"
   },
   {
     "name": "Solv Protocol",
@@ -126,15 +234,33 @@
     "function": "Trading Card Game, Play-to-Earn"
   },
   {
+    "name": "Stargate Finance",
+    "link": "https://stargate.finance",
+    "chain": "Mantle, Ethereum, Arbitrum",
+    "function": "Cross-Chain Bridge, Liquidity"
+  },
+  {
     "name": "Synthetix",
     "link": "https://synthetix.io",
     "chain": "Ethereum, Optimism",
     "function": "Synthetic Assets, Trading"
   },
   {
+    "name": "Treehouse Protocol",
+    "link": "https://treehouse.finance",
+    "chain": "Mantle",
+    "function": "Portfolio Analytics, DeFi"
+  },
+  {
     "name": "Uniswap",
     "link": "https://uniswap.org",
     "chain": "Ethereum",
     "function": "Swap, Liquidity"
+  },
+  {
+    "name": "Vooi",
+    "link": "https://vooi.io",
+    "chain": "Mantle",
+    "function": "Perpetual DEX Aggregator"
   }
 ]
